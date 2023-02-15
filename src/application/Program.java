@@ -20,6 +20,8 @@ public class Program {
 
         aluno.imprimir(vetor);
 
+        System.out.println("Hello mundo");
+
         sc.close();
     }
 
