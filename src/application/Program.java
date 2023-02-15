@@ -11,46 +11,16 @@ public class Program {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        Aluno[] alunos = new Aluno[2];
-        Aluno aluno;
-        Telefone telefone;
+        Aluno[] vetor = new Aluno[2];
+        Aluno aluno = new Aluno();
 
-
-        for (int i = 0; i < alunos.length; i++) {
-
-            System.out.print("Nome do aluno: ");
-            String nome = sc.nextLine();
-            System.out.print("Idade do aluno: ");
-            int idade = sc.nextInt();
-            System.out.print("Matricula: ");
-            sc.nextLine();
-            String matricula = sc.nextLine();
-            System.out.print("Telefone: ");
-            String numero = sc.nextLine();
-
-            aluno = new Aluno();
-            aluno.nome = nome;
-            aluno.idade = idade;
-            aluno.matricula = matricula;
-            telefone = new Telefone();
-            aluno.telefone.numero = numero;
-
-            alunos[i] = aluno;
-
+        for (int i = 0; i < vetor.length; i++) {
+            vetor[i] = aluno.lerAluno();
         }
 
-        for (Aluno var : alunos) {
-            System.out.println("Nome: "
-                    + var.nome
-                    + " Idade: "
-                    + var.idade
-                    + " Matricula: "
-                    + var.matricula
-                    + " Telefone: "
-                    + var.telefone.numero);
-        }
-
+        aluno.imprimir(vetor);
 
         sc.close();
     }
+
 }
